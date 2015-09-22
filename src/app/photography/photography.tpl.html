@@ -1,0 +1,7 @@
+<div class="row" style="padding-bottom: 10px" ng-repeat="image in results track by $index" ng-if="$index % 4 == 0">
+  <div class="col-md-3 letter-box" 
+       ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3]" 
+       ng-if="results[i] != null">
+    <a ng-href="./assets/{{category}}/{{results[i]}}.jpg"><img class="img-responsive img-thumbnail" ng-src="./assets/{{category}}/{{results[i]}}.jpg" alt=""></a>
+  </div>
+</div>

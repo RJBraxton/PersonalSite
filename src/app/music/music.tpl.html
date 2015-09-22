@@ -1,0 +1,20 @@
+<div class="col-md-4 col-md-offset-1">
+  <div class="well">
+    <h3>Repertoire: </h3>
+    <ul ng-repeat="(key, value) in tracks | orderBy: 'composer' |groupBy: 'composer'">
+      <h4>{{key}}</h4>
+      <li ng-repeat="piece in value | orderBy: 'title'">
+        
+        <text ng-if="!piece.video">{{ piece.title }}</text>
+        <a ng-if="piece.video" ng-click="showVideo(piece.video)">{{ piece.title }}</a>
+
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="well text-center videoBox">
+      </div>
+</div>
