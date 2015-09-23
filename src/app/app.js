@@ -5,6 +5,8 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.about',
   'ngBoilerplate.music',
   'ngBoilerplate.photography',
+  'ngBoilerplate.css3',
+  'ngBoilerplate.code',
   'ui.router',
   'angular.filter'
   ])

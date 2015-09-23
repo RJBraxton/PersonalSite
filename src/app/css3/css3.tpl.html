@@ -1,0 +1,184 @@
+<div class="col-md-12">
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">  
+        <h4>Curves & Rounded Corners</h4>
+        <p>Rounded corners are a new, very useful feature. You can achieve them with the css class <code>border-radius</code>.</p>
+        <p>This is shown with different values in the images to the right. From left to right, the values are <var>10%</var>, <var>30%</var>, and <var>100%</var>. The 100% is very useful for cropping an image into a circle without using any code.</p>
+        <p>Note that this property is not specific to images, and can be used for any container.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img style="border-radius: 10%; width: 200px; height: 200px;" src="./assets/landscapes/1.jpg">
+      <img style="border-radius: 30%; width: 200px; height: 200px;" src="./assets/landscapes/1.jpg">
+      <img style="border-radius: 100%; width: 200px; height: 200px;" src="./assets/landscapes/1.jpg">
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">  
+        <h4>Individual Corners</h4>
+        <p><code>border-radius</code> is actually just a shorthand for four other CSS classes: <code>border-top-left-radius</code>, <code>border-top-right-radius</code>, <code>border-bottom-right-radius</code>, and <code>border-bottom-left-radius</code>.</p>
+        <p>Use these as needed for some nifty effects.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img style="border-top-left-radius: 100%" src="http://placehold.it/200/111111">
+      <img style="border-top-left-radius: 30%; border-bottom-right-radius: 30%; width: 200px; height: 200px;" src="http://placehold.it/200/111111">
+      <img style="border-top-right-radius: 100%; border-bottom-left-radius: 30%;" src="http://placehold.it/200/111111">
+    </div>
+  </div>
+
+  <br>
+
+  <!-- <div class="row">
+    <div class="col-md-6">
+      <div class="well">  
+        <h4>Border Image</h4>
+        <p><code>border-image</code> is a new, useful way to integrate custom borders using only CSS.</p>
+        <p>http://www.w3schools.com/css/css3_border_images.asp</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img style=class="one-round-corner" src="http://placehold.it/200/111111">
+      <img class="opposing-round-corners" src="http://placehold.it/200/111111">
+      <img class="different-round-corners" src="http://placehold.it/200/111111">
+    </div>
+  </div>
+
+  <br> -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">  
+        <h4>Backgrounds & Scaling</h4>
+        <p>Full page backgrounds are a standard feature of the modern web. There are a few things to note here.</p>
+        <p>First, to set your background image, you'll need to set <code>background</code> to <var>url(...)</var></p>
+        <p>Second, <code>background-size</code> is very important for maintaining consistent backgrounds. It can take several values, but the ones to look out for in responsive design are:</p>
+        <ul>
+          <li><var>contain</var>: the background image will scale up, as long as the entire iamge fits within the container and retains it's proportions. This means it may not fill the entire container. <code>background</code>: <var> url(...) no-repeat</var> can be useful in this case.</li>
+          <li><var>cover</var>: The background image will cover the entire container and retain its proportions. Some parts of the image will not be visible if it has a different aspect ratio than the container.</li>
+        </ul>
+        <p>Shown from left to right: <var>contain</var>, <var>contain (no repeat)</var>, and <var>cover</var>. As another example, the background of this site is <a href="./assets/images/Rockies.jpg">this image</a>, set to <var>cover</var>.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div style="width: 200px; height: 200px; background: url('./assets/portraits/3.jpg'); background-size: contain; display: inline-block; border: 1px solid white"></div>
+      <div style="width: 200px; height: 200px; background: url('./assets/portraits/3.jpg') no-repeat; background-size: contain; display: inline-block; border: 1px solid white"></div>
+      <div style="width: 200px; height: 200px; background: url('./assets/portraits/3.jpg'); background-size: cover; display: inline-block; border: 1px solid white"></div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">
+        <h4>Colors</h4>
+        <p>CSS3 has also introduced some new color possibilities. If you've grown accustomed to using rgb colors, there's no need to change what you're doing. HSL is just a different way to produce the same colors.</p>
+        <p>Opacity ranges from 0.0 (completely invsible) to 1.0 (completely opaque).</p>
+        <ul>
+          <li>RGBA: typical RGB format, but with alpha (also known as opacity or transparency). <code>rgba(255,0,0,0.1)</code> </li>
+          <li>HSL: Hue, saturation, and lightness. <code>hsl(120, 100%, 50%)</code></li>
+          <li>HSLA: The same as HSL, but with an extra parameter for opacity.</li>
+        </ul>
+        <p><code>opacity</code> is also a standalone CSS property that will affect the entire container.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div style="width: 200px; height: 200px; background: rgba(255,0,0,0.5); display: inline-block" class="text-center">
+        <span style="color: white; font-size: 3em; height: 100px">0.5.</span>
+      </div>
+      <div style="width: 200px; height: 200px; background: rgba(255,0,0,0.2); display: inline-block" class="text-center">
+        <span style="color: white; font-size: 3em; height: 100px">0.2.</span>
+      </div>
+      <div style="width: 200px; height: 200px; background: rgba(255,0,0,0.9); display: inline-block" class="text-center">
+        <span style="color: white; font-size: 3em; height: 100px">0.9.</span>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">
+        <h4>Shadows</h4>
+        <p><code>text-shadow</code> and <code>box-shadow</code> both take 1-4 parameters in this order: horizontal shadow, vertical shadow, blur, and color. The two classes apply to text and containers, respectively.</p>
+        <p>Text shadow: <input ng-model="exampleShadowText['text-shadow']"type="text"></p>
+        <p>Box shadow: <input ng-model="exampleShadowBox['box-shadow']"type="text"></p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="">
+        <div style="height: 160px; width: 160px; background-color: white; border: 2px solid black;" class="text-center" ng-style="exampleShadowBox">
+          <span ng-style="exampleShadowText">This text has a shadow.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">
+        <h4>When text is overflowing its parent container</h4>
+        <p><code>text-overflow</code> is very useful for this. When text is too big for a container, it can either clip it (<var>clip</var>) or clip it and leave an ellipses (<var>ellipsis</var>). For both of these, you're going to want to also set <code>overflow</code> to <var>hidden</var>.</p>
+        <p>Another important thing to consider is <code>word-wrap:  break-word</code>, which will break words apart if they are extending out of their parent container.</p>
+        <p>Regarding breaking, <code>word-break</code> is handy for this. <var>break-all</var> will let words be broken apart at any point, while <var>keep-all</var> will prevent words from breaking.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div style="max-width: 150px; height: 50px; background: white; display: inline-block; text-overflow: clip; overflow: hidden"><span>text-overflow is set to clip here. text-overflow is set to clip here. text-overflow is set to clip here. text-overflow is set to clip here. text-overflow is set to clip here. text-overflow is set to clip here. </span></div>
+      <div style="max-width: 150px; height: 1.5em; background: white; display: inline-block; overflow: hidden; text-overflow: ellipsis;"><span>ellipsisellipsisellipsisellipsisellipsis</span></div>
+      <div style="max-width: 150px; height: 50px; background: white; display: inline-block"></div>
+      <div style="max-width: 150px; height: 50px; background: white; display: inline-block"></div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">
+        <h4>Fonts</h4>
+        <p>Fonts are important! If you want to utilize a font that a user doesn't have installed, font-faces are for you.</p>
+        <p>Supported formats are .TFF, .OTF, .WOFF, and .EOT.</p>
+        <p>To utilize this, first define your font-face:</p>
+        <code>@font-face { <br>
+          &nbsp;&nbsp;&nbsp;font-family: <b>customFont</b>; <br>
+          &nbsp;&nbsp;&nbsp;src: url(<b>...</b>); <br>
+        }</code>
+        <p>And then:</p>
+        <p><code>div { font-family: <b>customFont</b>; } </code></p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well" style="transform: rotate(-10deg)">
+        <h4>Spinning out of control</h4>
+        <p>CSS3 brings us a bunch of <a href="http://www.w3schools.com/css/css3_2dtransforms.asp">2D</a> and <a href="http://www.w3schools.com/css/css3_3dtransforms.asp">3D</a> transformations. <var>rotate</var> is the most conventionally useful.</p>
+        <p>Set <code>transform</code> to <var>rotate(90deg)</var> to utilize this.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well" style="transform: skew(10deg, 15deg)">
+        <p><code>transform: skew(20deg, 20deg)</code> is an option as well, if you ever need that.</p>
+        <p>The two arguments are for the x- and y-axis.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
